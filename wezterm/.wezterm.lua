@@ -1,7 +1,7 @@
 local wezterm = require 'wezterm';
 
 return {
-	font = wezterm.font("Iosevka NF"),
+	font = wezterm.font("Iosevka SS18"),
 	color_scheme = "Ayu Mirage",
 	font_size = 19.0,
 	window_background_image = "/Users/xhu/Pictures/1380180928620.jpg",
