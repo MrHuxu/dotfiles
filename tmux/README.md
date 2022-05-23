@@ -10,4 +10,4 @@
 
 2. Put `.tmux.conf` to the directory `~/`
 
-3. Open tmux and wait tpm to install all dependencies
+3. Open tmux and follow the README of tpm to install all dependencies
