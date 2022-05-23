@@ -8,6 +8,7 @@
                 fish \
                 tmux \
                 neovim
+
         brew install --cask \
                 wezterm \
                 visual-studio-code \
