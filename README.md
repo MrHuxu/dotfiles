@@ -21,7 +21,8 @@
                 eudic \
                 wechat \
                 baiduinput \
-                appcleaner
+                appcleaner \
+                intellij-idea
 
 - [Go](https://go.dev/dl/)
 - [Java](https://www.oracle.com/java/technologies/downloads/#jdk18-mac)
