@@ -1,6 +1,6 @@
 # gvm > /usr/local/etc/dev
 
-alias rmt "rmtrash"
+alias rmt "trash"
 alias vim "nvim"
 
 alias proxy 'export all_proxy=http://127.0.0.1:1087'
