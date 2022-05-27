@@ -8,7 +8,7 @@
                 fish \
                 tmux \
                 neovim \
-                rmtrash
+                trash
 
         brew install --cask \
                 wezterm \
