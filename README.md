@@ -7,7 +7,8 @@
         brew install \
                 fish \
                 tmux \
-                neovim
+                neovim \
+                rmtrash
 
         brew install --cask \
                 wezterm \
