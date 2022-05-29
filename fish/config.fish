@@ -28,7 +28,7 @@ set -gx WORKSPACE /Users/xu.hu/Workspace
 set -gx MAVEN_HOME /Users/xu.hu/.java/apache-maven-3.8.5
 set -gx PATH $MAVEN_HOME/bin $PATH
 
-set -gx GRADLE_USER_HOME /Users/xu.hu/.java/gradle-7.4.2
+set -gx GRADLE_USER_HOME /Users/xhu/.java/gradle-7.4.2
 set -gx PATH $GRADLE_USER_HOME/bin $PATH
 
 set -gx JDTLS_HOME /Users/xu.hu/.java/jdt-language-server-1.10.0-202204131925
