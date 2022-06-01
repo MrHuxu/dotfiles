@@ -8,7 +8,9 @@
                 fish \
                 tmux \
                 neovim \
-                trash
+                trash \
+                colima \
+                docker
 
         brew install --cask \
                 wezterm \
@@ -17,7 +19,6 @@
                 raycast \
                 clashx \
                 sequel-ace \
-                docker \
                 spectacle \
                 eudic \
                 wechat \
