@@ -33,3 +33,7 @@ set -gx PATH $GRADLE_USER_HOME/bin $PATH
 
 set -gx JDTLS_HOME /Users/xu.hu/.java/jdt-language-server-1.10.0-202204131925
 set -gx PATH $JDTLS_HOME/bin $PATH
+
+set -Ux fish_tmux_autostart false
+set -Ux fish_tmux_autostart_once false
+set -Ux fish_tmux_autoconnect false
