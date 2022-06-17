@@ -24,7 +24,8 @@
                 wechat \
                 baiduinput \
                 appcleaner \
-                intellij-idea
+                intellij-idea \
+                postman
 
 - [Go](https://go.dev/dl/)
 - [Java](https://www.oracle.com/java/technologies/downloads/#jdk18-mac)
