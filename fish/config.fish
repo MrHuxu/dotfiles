@@ -2,6 +2,7 @@
 
 alias rmt "trash"
 alias vim "nvim"
+alias cat "bat"
 
 alias proxy 'export all_proxy=http://127.0.0.1:1087'
 alias nasproxy 'export all_proxy=http://192.168.0.101:1087'
