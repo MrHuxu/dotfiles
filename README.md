@@ -9,6 +9,7 @@
                 tmux \
                 neovim \
                 trash \
+                bat \
                 colima \
                 docker
 
