@@ -55,12 +55,19 @@ require "packer".startup(
 		use 'numToStr/Comment.nvim'
 
 		use 'neovim/nvim-lspconfig'
-		use { 'ray-x/navigator.lua', requires = { 'ray-x/guihua.lua', run = 'cd lua/fzy && make' } }
 		use 'hrsh7th/cmp-nvim-lsp'
 		use 'hrsh7th/cmp-buffer'
 		use 'hrsh7th/cmp-path'
 		use 'hrsh7th/cmp-cmdline'
 		use 'hrsh7th/nvim-cmp'
+		use({
+			"glepnir/lspsaga.nvim",
+			branch = "main",
+			config = function()
+				local saga = require("lspsaga")
+				saga.init_lsp_saga {}
+			end
+		})
 
 		use {
 			"folke/trouble.nvim",
@@ -155,28 +162,6 @@ require("bufferline").setup {
 }
 
 require('Comment').setup {}
-
-require 'navigator'.setup({
-	default_mapping = false,
-	keymaps = {
-		{ key = 'gp', func = "require('navigator.definition').definition_preview()" },
-		{ key = 'gr', func = "require('navigator.reference').async_ref()" },
-		{ key = 'gi', func = 'implementation()' },
-		{ key = 'K', func = 'hover({ popup_opts = { border = single, max_width = 80 }})' },
-		{ key = '<Space>ca', mode = 'n', func = "require('navigator.codeAction').code_action()" },
-		{ key = '<Space>rn', func = "require('navigator.rename').rename()" },
-	},
-	icons = {
-		icons = true, -- set to false to use system default ( if you using a terminal does not have nerd/icon)
-		code_action_icon = '',
-		code_lens_action_icon = '👓',
-		diagnostic_head = '',
-		diagnostic_err = '',
-		diagnostic_warn = '',
-		diagnostic_info = '',
-		diagnostic_hint = '',
-	}
-})
 
 require("lspconfig")["gopls"].setup {}
 vim.g.go_def_mapping_enabled = 0
@@ -307,8 +292,14 @@ keymap("n", "<space>,", ":BufferLineCyclePrev<CR>", keymap_opts)
 keymap("n", "tw", ":Trouble workspace_diagnostics<cr>", keymap_opts)
 keymap("n", "td", ":Trouble document_diagnostics<cr>", keymap_opts)
 
+keymap("n", "ca", ":Lspsaga code_action<CR>", keymap_opts)
+keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>", keymap_opts)
+keymap("n", "gs", "<Cmd>Lspsaga signature_help<CR>", keymap_opts)
+keymap("n", "<space>rn", "<cmd>Lspsaga rename<CR>", keymap_opts)
+keymap("n", "gp", "<cmd>Lspsaga preview_definition<CR>", keymap_opts)
+
 require("which-key").register({
-	f = {}, g = {}, n = {}, t = {},
+	c = {}, f = {}, g = {}, n = {}, r = {}, t = {},
 })
 
 vim.g.neovide_cursor_animation_length = 0.015
