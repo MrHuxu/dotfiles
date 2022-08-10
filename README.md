@@ -10,6 +10,8 @@
                 neovim \
                 trash \
                 bat \
+                fzf \
+                fd \
                 colima \
                 docker
 
