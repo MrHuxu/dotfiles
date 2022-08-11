@@ -8,8 +8,9 @@ alias proxy 'export all_proxy=http://127.0.0.1:1087'
 alias nasproxy 'export all_proxy=http://192.168.0.101:1087'
 alias unproxy 'set --erase all_proxy'
 
-alias fv 'fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | xargs nvim'
-alias fc 'fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | xargs code'
+alias fvim 'fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | xargs nvim'
+alias fcat 'fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | xargs bat'
+alias fcode 'fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | xargs code'
 
 set -gx nvm_default_version v18.2.0
 
