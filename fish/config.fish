@@ -32,9 +32,9 @@ set -gx PATH "$HOME/.cargo/bin" $PATH
 # java related configs
 set -gx JAVA_HOME /Users/xhu/.java/jdk-11.0.15+10/Contents/Home
 set -gx PATH $JAVA_HOME/bin $PATH
-set -gx WORKSPACE /Users/xhu/Workspace
+set -gx WORKSPACE /Users/xu.hu/Workspace
 
-set -gx MAVEN_HOME /Users/xhu/.java/apache-maven-3.8.5
+set -gx MAVEN_HOME /Users/xu.hu/.java/apache-maven-3.8.5
 set -gx PATH $MAVEN_HOME/bin $PATH
 
 set -gx GRADLE_USER_HOME /Users/xhu/.java/gradle-6.4.1
