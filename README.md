@@ -7,21 +7,24 @@
         brew install \
                 fish \
                 tmux \
-                neovim
+                neovim \
+                imagemagick \
+                bat
 
         brew install --cask \
-                wezterm \
+                kitty \
                 visual-studio-code \
                 logseq \
                 raycast \
                 clashx \
                 sequel-ace \
-                docker \
                 spectacle \
                 eudic \
                 wechat \
                 baiduinput \
-                appcleaner
+                appcleaner \
+                docker
+
 
 - [Go](https://go.dev/dl/)
 - [Java](https://www.oracle.com/java/technologies/downloads/#jdk18-mac)
