@@ -30,9 +30,7 @@ require 'packer'.startup(
 		use 'folke/tokyonight.nvim'
 
 		use {
-			'lewis6991/gitsigns.nvim',
-			tag = 'release',
-			requires = { 'nvim-lua/plenary.nvim' }
+			'lewis6991/gitsigns.nvim'
 		}
 
 		use 'nvim-treesitter/nvim-treesitter'
@@ -77,6 +75,7 @@ require 'packer'.startup(
 		use 'fatih/vim-go'
 		use 'rust-lang/rust.vim'
 		use 'simrat39/rust-tools.nvim'
+		use 'mfussenegger/nvim-jdtls'
 
 		use 'L3MON4D3/LuaSnip'
 		use 'rafamadriz/friendly-snippets'
@@ -207,6 +206,36 @@ require 'rust-tools'.setup {
 	}
 }
 
+require 'lspconfig'.jdtls.setup {}
+local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
+local workspace_dir = '/path/to/workspace-root/' .. project_name
+require 'jdtls'.start_or_attach {
+	cmd = {
+		'/Users/xu.hu/.java/jdk-17.0.3.1.jdk/Contents/Home/bin/java',
+		'-Declipse.application=org.eclipse.jdt.ls.core.id1',
+		'-Dosgi.bundles.defaultStartLevel=4',
+		'-Declipse.product=org.eclipse.jdt.ls.core.product',
+		'-Dlog.protocol=true',
+		'-Dlog.level=ALL',
+		'-Xms1g',
+		'--add-modules=ALL-SYSTEM',
+		'--add-opens', 'java.base/java.util=ALL-UNNAMED',
+		'--add-opens', 'java.base/java.lang=ALL-UNNAMED',
+		'-jar',
+		'/Users/xu.hu/.java/jdt-language-server-1.14.0-202207211651/plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar',
+		'-configuration', '/Users/xu.hu/.java/jdt-language-server-1.14.0-202207211651/config_mac',
+		'-data', workspace_dir
+	},
+	root_dir = require 'jdtls.setup'.find_root({ '.git', 'mvnw', 'gradlew', 'pom.xml' }),
+	settings = {
+		java = {
+		}
+	},
+	init_options = {
+		bundles = {}
+	},
+}
+
 local luasnip = require 'luasnip'
 require 'luasnip.loaders.from_vscode'.lazy_load()
 
@@ -282,7 +311,7 @@ keymap('n', '<space>wr', '<CMD>lua vim.lsp.buf.remove_workspace_folder()<CR>', k
 keymap('n', '<space>wl', '<CMD>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', keymap_opts)
 keymap('n', '<space>D', '<CMD>lua vim.lsp.buf.type_definition()<CR>', keymap_opts)
 keymap('n', 'gr', '<CMD>lua vim.lsp.buf.references()<CR>', keymap_opts)
-keymap('n', '<space>f', '<CMD>lua vim.lsp.buf.formatting()<CR>', keymap_opts)
+keymap('n', '<space>f', '<CMD>lua vim.lsp.buf.format { async = true }<CR>', keymap_opts)
 
 keymap('n', '<space>sp', '<CMD>split<CR>', keymap_opts)
 keymap('n', '<space>vsp', '<CMD>vsplit<CR>', keymap_opts)
