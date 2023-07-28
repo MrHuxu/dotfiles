@@ -33,7 +33,8 @@
                 visual-studio-code \
                 postman \
                 google-chrome \
-                keepassxc
+                keepassxc \
+                keka
 
 
 
