@@ -1,17 +1,5 @@
 # Dotfiles
 
-## Dependencies
-
-- [Homebrew](https://brew.sh/)
-        
-        brew install \
-                fish \
-                tmux \
-                neovim \
-                imagemagick \
-                bat \
-# Dotfiles
-
 
 ## Dependencies
 
@@ -24,7 +12,7 @@
                 neovim \
                 imagemagick \
                 bat \
-    
+                orbstack
 
 
         brew install --cask \
@@ -38,8 +26,7 @@
                 eudic \
                 wechat \
                 baiduinput \
-                appcleaner \
-                docker
+                appcleaner
 
 
 
