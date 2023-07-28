@@ -16,6 +16,8 @@
 
 
         brew install --cask \
+                iina \
+                iterm2 \
                 kitty \
                 visual-studio-code \
                 obsidian \
@@ -23,11 +25,13 @@
                 clashx \
                 sequel-ace \
                 spectacle \
+                slack \
                 eudic \
                 wechat \
                 baiduinput \
-                appcleaner
-
+                appcleaner \
+                visual-studio-code \
+                postman
 
 
 
