@@ -31,7 +31,8 @@
                 baiduinput \
                 appcleaner \
                 visual-studio-code \
-                postman
+                postman \
+                google-chrome
 
 
 
