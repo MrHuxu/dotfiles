@@ -14,7 +14,7 @@
         brew install --cask \
                 kitty \
                 visual-studio-code \
-                logseq \
+                obsidian \
                 raycast \
                 clashx \
                 sequel-ace \
