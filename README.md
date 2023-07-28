@@ -32,7 +32,8 @@
                 appcleaner \
                 visual-studio-code \
                 postman \
-                google-chrome
+                google-chrome \
+                keepassxc
 
 
 
