@@ -11,7 +11,9 @@
                 tmux \
                 neovim \
                 imagemagick \
-                bat
+                bat \
+                docker \
+                colima
 
 
         brew install --cask \
@@ -27,8 +29,7 @@
                 appcleaner \
                 visual-studio-code \
                 postman \
-                keepassxc \
-                docker
+                keepassxc
 
 
 
