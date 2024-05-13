@@ -29,7 +29,8 @@
                 appcleaner \
                 visual-studio-code \
                 postman \
-                keepassxc
+                keepassxc \
+                poe
 
 
 
