@@ -1,4 +1,4 @@
-# gvm > /usr/local/etc/dev
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # alias
 alias rmt trash
@@ -28,23 +28,6 @@ set -gx ACK_GINKGO_RC true
 
 # rust related configs
 set -gx PATH "$HOME/.cargo/bin" $PATH
-
-# java related configs
-set -gx JAVA_HOME /Users/xhu/.java/jdk-11.0.15+10/Contents/Home
-set -gx PATH $JAVA_HOME/bin $PATH
-set -gx WORKSPACE /Users/xu.hu/Workspace
-
-set -gx MAVEN_HOME /Users/xu.hu/.java/apache-maven-3.8.5
-set -gx PATH $MAVEN_HOME/bin $PATH
-
-set -gx GRADLE_USER_HOME /Users/xhu/.java/gradle-6.4.1
-set -gx PATH $GRADLE_USER_HOME/bin $PATH
-
-set -gx JDTLS_HOME /Users/xhu/.java/jdt-language-server-1.14.0-202207211651
-set -gx PATH $JDTLS_HOME/bin $PATH
-
-set -gx SCALA_HOME /Users/xhu/.scala/scala-2.11.12
-set -gx PATH $SCALA_HOME/bin $PATH
 
 # fish extension configs
 set -Ux fish_tmux_autostart false
