@@ -2,11 +2,7 @@
 
 ## Dependencies
 
-- [packer](https://github.com/wbthomason/packer.nvim)
-
-- cmd tools
-
-        brew install ripgrep rust-analyzer lua-language-server
+- [lazy](https://github.com/folke/lazy.nvim)
 
 ## Usage
 
@@ -14,4 +10,4 @@
 
 2. Put `init.lua` to the directory `~/.config/nvm/`
 
-4. Open nvim and execute the command `:PackerInstall`
+4. Open nvim and  follow the tutorial
