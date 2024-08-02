@@ -6,7 +6,7 @@
     - jhillyerd/plugin-git
     - jorgebucaran/fish-nvm
     - rafaelrinaldi/pure
-    - budimanjojo/tmux.fish
+    - MrHuxu/zellij.fish
 
 ## Usage
 

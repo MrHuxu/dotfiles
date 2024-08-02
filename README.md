@@ -8,7 +8,7 @@
         
         brew install \
                 fish \
-                tmux \
+                zellij \
                 neovim \
                 imagemagick \
                 bat \
